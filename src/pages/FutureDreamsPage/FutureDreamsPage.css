@@ -1,0 +1,402 @@
+
+.future-dreams-page {
+    min-height: 100vh;
+    padding-bottom: 70px;
+    background: var(--color-fondo);
+}
+
+.future-dreams-container {
+    width: min(100% - 40px, 1050px);
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+.future-dreams-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.future-dreams-heading > span {
+    color: var(--color-vino-claro);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.future-dreams-heading h1 {
+    margin: 18px 0;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: clamp(2.7rem, 7vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.future-dreams-heading h1 em {
+    color: var(--color-rojo-amor);
+    font-weight: 400;
+}
+
+.future-dreams-heading p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--color-texto-secundario);
+    line-height: 1.9;
+}
+
+/* INTRODUCCIÓN */
+
+.future-dreams-intro {
+    max-width: 760px;
+    padding: 35px 25px;
+    margin: 0 auto 45px;
+    color: var(--color-vino);
+    background: var(--color-superficie-rosa);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+}
+
+.future-dreams-intro h2 {
+    margin: 15px 0;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.future-dreams-intro p {
+    max-width: 520px;
+    margin: 0 auto;
+    color: var(--color-texto-secundario);
+    line-height: 1.8;
+}
+
+/* TARJETAS */
+
+.future-dreams-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.future-dream-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+    padding: 27px;
+    color: var(--color-texto);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform var(--transicion-suave),
+        box-shadow var(--transicion-suave),
+        border-color var(--transicion-suave),
+        background var(--transicion-suave);
+}
+
+.future-dream-card:hover,
+.future-dream-card.selected {
+    transform: translateY(-5px);
+    background: var(--color-perla);
+    border-color: var(--color-rosa);
+    box-shadow: var(--sombra-romantica);
+}
+
+.future-dream-card:focus-visible {
+    outline: 3px solid var(--color-rosa);
+    outline-offset: 4px;
+}
+
+.future-dream-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: var(--color-rosa);
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+}
+
+.future-dream-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 20px;
+    color: var(--color-rojo-amor);
+    background: var(--color-rosa-suave);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-redondo);
+}
+
+.future-dream-card h3 {
+    margin: 0 0 10px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.future-dream-card p {
+    margin: 0 0 20px;
+    color: var(--color-texto-secundario);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.future-dream-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: var(--color-rojo-amor);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* MENSAJE DESCUBIERTO */
+
+.future-dream-reveal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 25px;
+    margin-top: 30px;
+    color: var(--color-vino);
+    background: var(--color-superficie-rosa);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    animation: futureReveal 0.4s ease;
+}
+
+.future-dream-reveal > span {
+    margin-top: 15px;
+    color: var(--color-rojo-amor);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.future-dream-reveal h2 {
+    margin: 18px 0 12px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.future-dream-reveal p {
+    max-width: 550px;
+    color: var(--color-texto-secundario);
+    font-family: var(--font-romantica);
+    font-size: 1.3rem;
+    line-height: 1.9;
+}
+
+.future-dream-reveal button {
+    padding: 10px 20px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa);
+    border-radius: var(--radio-pequeno);
+    cursor: pointer;
+    transition: var(--transicion-suave);
+}
+
+.future-dream-reveal button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+}
+
+/* CARTA */
+
+.future-dreams-letter {
+    max-width: 750px;
+    padding: 45px clamp(25px, 6vw, 65px);
+    margin: 65px auto 45px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+}
+
+.future-letter-decoration {
+    color: var(--color-rojo-amor);
+}
+
+.future-dreams-letter > span {
+    display: block;
+    margin-top: 15px;
+    color: var(--color-vino-claro);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.future-dreams-letter h2 {
+    margin: 20px 0;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.future-dreams-letter p {
+    color: var(--color-texto-secundario);
+    font-family: var(--font-romantica);
+    font-size: 1.3rem;
+    line-height: 1.9;
+}
+
+.future-dreams-letter .future-letter-highlight {
+    padding: 20px;
+    color: var(--color-rojo-amor);
+    background: var(--color-rosa-suave);
+    border-left: 3px solid var(--color-rosa);
+    border-radius: 0 var(--radio-pequeno) var(--radio-pequeno) 0;
+    font-style: italic;
+}
+
+/* CIERRE */
+
+.future-dreams-ending {
+    max-width: 650px;
+    padding: 40px 20px;
+    margin: 0 auto 45px;
+    color: var(--color-vino);
+    text-align: center;
+}
+
+.future-ending-hearts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: var(--color-rojo-amor);
+}
+
+.future-dreams-ending h2 {
+    margin: 25px 0 15px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.future-dreams-ending p {
+    color: var(--color-texto-secundario);
+    font-family: var(--font-romantica);
+    font-size: 1.3rem;
+    line-height: 1.9;
+}
+
+.future-dreams-ending > span {
+    display: block;
+    margin-top: 20px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* NAVEGACIÓN */
+
+.future-dreams-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.future-dreams-navigation button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 18px;
+    color: var(--color-vino);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pequeno);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.future-dreams-navigation button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+}
+
+.future-dreams-navigation button:focus-visible {
+    outline: 3px solid var(--color-rosa);
+    outline-offset: 3px;
+}
+
+/* ANIMACIONES */
+
+@keyframes futureReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .future-dreams-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .future-dreams-container {
+        width: min(100% - 28px, 1050px);
+        padding-top: 40px;
+    }
+
+    .future-dreams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .future-dream-card {
+        min-height: 235px;
+    }
+
+    .future-dreams-letter {
+        padding: 35px 22px;
+    }
+
+    .future-dreams-navigation button {
+        justify-content: center;
+        padding: 11px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .future-dream-card,
+    .future-dream-reveal,
+    .future-dream-reveal button,
+    .future-dreams-navigation button {
+        animation: none;
+        transition: none;
+    }
+}

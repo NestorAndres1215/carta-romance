@@ -1,0 +1,393 @@
+
+.little-moments-page {
+    min-height: 100vh;
+    padding-bottom: 70px;
+    background:
+        radial-gradient(ellipse at 15% 10%, rgba(244, 191, 203, 0.22), transparent 35%),
+        radial-gradient(ellipse at 90% 45%, rgba(229, 143, 163, 0.12), transparent 35%),
+        var(--color-fondo);
+}
+
+.little-moments-container {
+    width: min(100% - 40px, 1050px);
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+/* HEADING */
+
+.little-moments-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.little-moments-heading > span {
+    display: inline-block;
+    color: var(--color-rojo-amor);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.little-moments-heading h1 {
+    margin: 18px 0;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: clamp(2.7rem, 7vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.little-moments-heading h1 em {
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-weight: 500;
+}
+
+.little-moments-heading p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--color-texto-secundario);
+    line-height: 1.9;
+}
+
+/* INTRODUCTION */
+
+.little-moments-intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 780px;
+    padding: 25px 30px;
+    margin: 0 auto 45px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    box-shadow: var(--sombra-suave);
+}
+
+.little-moments-intro-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    color: var(--color-rojo-amor);
+    background: var(--color-rosa-pastel);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 50%;
+}
+
+.little-moments-intro p {
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-family: var(--font-romantica);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* MOMENTS GRID */
+
+.little-moments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.little-moment-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 285px;
+    padding: 28px;
+    color: var(--color-texto);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform var(--transicion-suave),
+        box-shadow var(--transicion-suave),
+        border-color var(--transicion-suave),
+        background var(--transicion-suave);
+}
+
+.little-moment-card:hover,
+.little-moment-card.active {
+    transform: translateY(-5px);
+    border-color: var(--color-rosa);
+    background: var(--color-perla);
+    box-shadow: var(--sombra-romantica);
+}
+
+.little-moment-card:focus-visible {
+    outline: 3px solid var(--color-rosa);
+    outline-offset: 4px;
+}
+
+.little-moment-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: var(--color-rosa);
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+}
+
+.little-moment-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    color: var(--color-rojo-amor);
+    background: var(--color-rosa-pastel);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 50%;
+    transition:
+        transform var(--transicion-suave),
+        background var(--transicion-suave);
+}
+
+.little-moment-card:hover .little-moment-icon,
+.little-moment-card.active .little-moment-icon {
+    transform: scale(1.08);
+    background: var(--color-superficie-profunda);
+}
+
+.little-moment-card h2 {
+    margin: 0 0 12px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.little-moment-card p {
+    margin: 0 0 20px;
+    color: var(--color-texto-secundario);
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+.little-moment-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: var(--color-rojo-amor);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* MOMENT REVEAL */
+
+.little-moment-reveal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 25px;
+    margin-top: 30px;
+    color: var(--color-vino);
+    background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.75), transparent 70%),
+        linear-gradient(135deg, var(--color-rosa-pastel), var(--color-superficie-profunda));
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-romantica);
+    text-align: center;
+    animation: littleMomentAppear 0.4s ease;
+}
+
+.little-moment-reveal > span {
+    margin-top: 15px;
+    color: var(--color-rojo-amor);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.little-moment-reveal h2 {
+    max-width: 550px;
+    margin: 17px 0 22px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.little-moment-reveal button {
+    padding: 11px 24px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa);
+    border-radius: 30px;
+    font-family: var(--font-principal);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicion-suave);
+}
+
+.little-moment-reveal button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    transform: translateY(-2px);
+}
+
+/* CLOSING */
+
+.little-moments-closing {
+    max-width: 650px;
+    padding: 65px 20px;
+    margin: 35px auto;
+    color: var(--color-vino);
+    text-align: center;
+}
+
+.little-moments-closing > svg {
+    color: var(--color-rojo-amor);
+}
+
+.little-moments-closing h2 {
+    margin: 17px 0;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.little-moments-closing p {
+    color: var(--color-texto-secundario);
+    font-family: var(--font-romantica);
+    font-size: 1.25rem;
+    line-height: 1.9;
+}
+
+.little-moments-closing span {
+    display: block;
+    margin-top: 20px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+/* NAVIGATION */
+
+.little-moments-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.little-moments-navigation button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 18px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-pequeno);
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.little-moments-navigation button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-suave);
+}
+
+/* ANIMATIONS */
+
+@keyframes littleMomentAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .little-moments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .little-moments-container {
+        width: min(100% - 28px, 1050px);
+        padding-top: 40px;
+    }
+
+    .little-moments-heading {
+        margin-bottom: 35px;
+    }
+
+    .little-moments-intro {
+        align-items: flex-start;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .little-moments-intro-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .little-moments-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .little-moment-card {
+        min-height: 240px;
+        padding: 24px;
+    }
+
+    .little-moment-reveal {
+        padding: 30px 20px;
+    }
+
+    .little-moments-closing {
+        padding: 45px 15px;
+    }
+
+    .little-moments-navigation {
+        flex-wrap: wrap;
+    }
+
+    .little-moments-navigation button {
+        justify-content: center;
+        padding: 11px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .little-moment-card,
+    .little-moment-icon,
+    .little-moment-reveal,
+    .little-moment-reveal button,
+    .little-moments-navigation button {
+        animation: none;
+        transition: none;
+    }
+}

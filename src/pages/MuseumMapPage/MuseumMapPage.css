@@ -1,0 +1,319 @@
+
+.museum-map {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            var(--color-perla) 0%,
+            var(--color-fondo) 55%,
+            var(--color-superficie-profunda) 100%
+        );
+}
+
+/* INTRODUCTION */
+
+.museum-map__intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 75px 25px 65px;
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+.museum-map__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.museum-map__eyebrow svg {
+    color: var(--color-rojo-pasion);
+}
+
+.museum-map__intro h1 {
+    margin-top: 25px;
+    font-family: var(--font-titulos);
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--color-vino);
+}
+
+.museum-map__intro h1 span {
+    color: var(--color-rojo-pasion);
+    font-style: italic;
+}
+
+.museum-map__intro > p {
+    max-width: 580px;
+    margin: 22px auto 0;
+    font-family: var(--font-romantica);
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--color-texto-secundario);
+}
+
+.museum-map__dedication {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 25px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 18px;
+    font-style: italic;
+}
+
+.museum-map__dedication svg {
+    color: var(--color-rojo-pasion);
+}
+
+/* EXHIBITIONS */
+
+.museum-map__exhibition {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 30px 50px;
+}
+
+.museum-map__section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.museum-map__section-heading > div > span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-rojo-amor);
+}
+
+.museum-map__section-heading h2 {
+    margin-top: 7px;
+    font-family: var(--font-titulos);
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--color-vino);
+}
+
+.museum-map__room-count {
+    padding: 10px 16px;
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 30px;
+    background: rgba(255, 249, 250, 0.85);
+    color: var(--color-rojo-amor);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* GRID */
+
+.museum-map__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* PREVIEW */
+
+.museum-map__preview {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-grande);
+    background: linear-gradient(
+        135deg,
+        var(--color-superficie),
+        var(--color-rosa-pastel)
+    );
+    box-shadow: var(--sombra-romantica);
+}
+
+.museum-map__preview-icon {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(
+        145deg,
+        var(--color-rosa-claro),
+        var(--color-rosa)
+    );
+    color: var(--color-rojo-amor);
+    box-shadow: 0 5px 18px rgba(196, 69, 93, 0.15);
+}
+
+.museum-map__preview-content {
+    flex: 1;
+}
+
+.museum-map__preview-content > span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--color-rojo-amor);
+}
+
+.museum-map__preview-content h2 {
+    margin: 7px 0;
+    font-family: var(--font-titulos);
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color-vino);
+}
+
+.museum-map__preview-content p {
+    font-family: var(--font-romantica);
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-texto-secundario);
+}
+
+.museum-map__enter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 24px;
+    border: 1px solid var(--color-rojo-amor);
+    border-radius: 30px;
+    background: linear-gradient(
+        135deg,
+        var(--color-rojo-amor),
+        var(--color-rojo-pasion)
+    );
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra-suave);
+}
+
+.museum-map__enter:hover {
+    background: var(--color-superficie);
+    color: var(--color-rojo-amor);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.museum-map__enter:focus-visible {
+    outline: 3px solid var(--color-rosa);
+    outline-offset: 4px;
+}
+
+/* FOOTER */
+
+.museum-map__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 45px 20px 30px;
+    color: var(--color-texto-secundario);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.museum-map__footer svg {
+    color: var(--color-rojo-amor);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .museum-map__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .museum-map__preview {
+        margin: 0 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .museum-map__intro {
+        padding: 55px 20px 45px;
+    }
+
+    .museum-map__intro > p {
+        font-size: 18px;
+    }
+
+    .museum-map__exhibition {
+        padding: 20px 18px 35px;
+    }
+
+    .museum-map__section-heading {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .museum-map__section-heading h2 {
+        font-size: 27px;
+    }
+
+    .museum-map__room-count {
+        align-self: flex-start;
+    }
+
+    .museum-map__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .museum-map__preview {
+        margin: 0 18px;
+        padding: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .museum-map__preview-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .museum-map__preview-content h2 {
+        font-size: 23px;
+    }
+
+    .museum-map__enter {
+        width: 100%;
+    }
+
+    .museum-map__footer {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .museum-map *,
+    .museum-map *::before,
+    .museum-map *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

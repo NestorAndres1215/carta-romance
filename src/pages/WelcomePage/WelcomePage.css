@@ -1,0 +1,267 @@
+
+.welcome {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 30px 7%;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(255, 232, 237, 0.95) 45%,
+            rgba(248, 213, 222, 0.95) 100%
+        );
+}
+
+/* HEADER */
+
+.welcome__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-rojo-amor);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.welcome__edition {
+    color: var(--color-texto-secundario);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* CONTENT */
+
+.welcome__content {
+    width: 100%;
+    max-width: 760px;
+    margin: 70px auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: slideUp 1s ease;
+}
+
+.welcome__ornament {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    color: var(--color-rojo-pasion);
+    margin-bottom: 45px;
+}
+
+.welcome__ornament span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--color-vino-claro);
+}
+
+.welcome__subtitle {
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.welcome__title {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-titulos);
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-vino);
+}
+
+.welcome__title span {
+    color: var(--color-rojo-pasion);
+    font-style: italic;
+}
+
+/* DIVIDER */
+
+.welcome__divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    color: var(--color-rojo-amor);
+}
+
+.welcome__divider span {
+    width: 75px;
+    height: 1px;
+    background: var(--color-rosa);
+}
+
+/* DESCRIPTION */
+
+.welcome__description {
+    max-width: 520px;
+    margin: auto;
+    font-family: var(--font-romantica);
+    font-size: 21px;
+    line-height: 1.7;
+    color: var(--color-texto-secundario);
+}
+
+.welcome__dedication {
+    margin-top: 22px;
+    font-family: var(--font-romantica);
+    font-size: 18px;
+    font-style: italic;
+    color: var(--color-rojo-amor);
+}
+
+/* BUTTON */
+
+.welcome__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 38px;
+    padding: 17px 30px;
+    border: 1px solid var(--color-rojo-amor);
+    border-radius: 30px;
+    background: linear-gradient(
+        135deg,
+        var(--color-rojo-amor),
+        var(--color-rojo-pasion)
+    );
+    color: #fff9fa;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra-romantica);
+}
+
+.welcome__button:hover {
+    background: var(--color-superficie);
+    color: var(--color-rojo-amor);
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+/* FOOTER */
+
+.welcome__footer {
+    display: block;
+    margin-top: 35px;
+    color: var(--color-texto-secundario);
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.welcome__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-texto-secundario);
+    font-size: 9px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome__bottom svg {
+    color: var(--color-rojo-amor);
+}
+
+/* DECORATIONS */
+
+.welcome__decoration {
+    position: absolute;
+    color: rgba(196, 69, 93, 0.13);
+    font-size: 180px;
+    pointer-events: none;
+    animation: float 5s ease-in-out infinite;
+}
+
+.welcome__decoration--left {
+    left: -45px;
+    bottom: 12%;
+}
+
+.welcome__decoration--right {
+    right: -45px;
+    top: 15%;
+    animation-delay: 1s;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .welcome {
+        padding: 25px 20px;
+    }
+
+    .welcome__header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .welcome__edition {
+        font-size: 9px;
+    }
+
+    .welcome__content {
+        margin: 55px auto;
+    }
+
+    .welcome__ornament {
+        margin-bottom: 35px;
+    }
+
+    .welcome__ornament span {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .welcome__subtitle {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .welcome__title {
+        font-size: clamp(39px, 11vw, 55px);
+    }
+
+    .welcome__description {
+        font-size: 19px;
+    }
+
+    .welcome__dedication {
+        font-size: 16px;
+    }
+
+    .welcome__button {
+        padding: 16px 22px;
+    }
+
+    .welcome__decoration {
+        font-size: 110px;
+    }
+
+    .welcome__bottom {
+        gap: 10px;
+        font-size: 7px;
+    }
+}

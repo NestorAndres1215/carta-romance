@@ -1,0 +1,508 @@
+
+.distance {
+    min-height: 100vh;
+    padding-bottom: 45px;
+}
+
+/* HERO */
+
+.distance__hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 30px 65px;
+}
+
+.distance__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: none;
+    background: transparent;
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    cursor: pointer;
+    transition: color var(--transicion-suave);
+}
+
+.distance__back:hover {
+    color: var(--color-rojo-amor);
+}
+
+.distance__heading {
+    max-width: 700px;
+    margin: 65px auto 0;
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+.distance__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--color-rojo-amor);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.distance__heading h1 {
+    margin-top: 20px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: clamp(38px, 7vw, 65px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.distance__heading h1 span {
+    display: block;
+    color: var(--color-rojo-pasion);
+    font-style: italic;
+}
+
+.distance__heading p {
+    max-width: 540px;
+    margin: 23px auto 0;
+    color: var(--color-texto-secundario);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* MAPA */
+
+.distance__map-section {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.distance__section-heading {
+    text-align: center;
+}
+
+.distance__section-heading > span {
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.distance__section-heading h2 {
+    margin-top: 14px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: clamp(27px, 4vw, 36px);
+    font-weight: 500;
+}
+
+.distance__section-heading p {
+    margin-top: 12px;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.distance__map {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 370px;
+    margin-top: 40px;
+    padding: 55px 55px 85px;
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    background-color: var(--color-rosa-pastel);
+    background-image:
+        radial-gradient(
+            rgba(196, 69, 93, 0.18) 0.8px,
+            transparent 0.8px
+        );
+    background-size: 19px 19px;
+    box-shadow: var(--sombra-romantica);
+}
+
+.distance__map-decoration {
+    position: absolute;
+    border: 1px solid rgba(168, 50, 80, 0.15);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.distance__map-decoration--one {
+    top: -90px;
+    left: 20%;
+    width: 280px;
+    height: 280px;
+}
+
+.distance__map-decoration--two {
+    right: -70px;
+    bottom: -100px;
+    width: 300px;
+    height: 300px;
+}
+
+.distance__map-decoration--three {
+    top: 40%;
+    left: 40%;
+    width: 100px;
+    height: 100px;
+}
+
+.distance__location {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    text-align: center;
+}
+
+.distance__pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    border: 1px solid var(--color-rosa);
+    border-radius: 50%;
+    background: var(--color-superficie);
+    color: var(--color-rojo-amor);
+    box-shadow: var(--sombra-romantica);
+}
+
+.distance__location > span {
+    margin-top: 14px;
+    color: var(--color-rojo-amor);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.distance__location strong {
+    margin-top: 7px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.distance__location small {
+    margin-top: 7px;
+    color: var(--color-texto-secundario);
+    font-size: 10px;
+}
+
+.distance__route {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 58%;
+    height: 150px;
+    transform: translate(-50%, -50%);
+}
+
+.distance__route-heart {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+    height: 49px;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--color-rosa);
+    border-radius: 50%;
+    background: var(--color-superficie);
+    color: var(--color-rojo-pasion);
+    box-shadow: var(--sombra-romantica);
+    animation: float 3s ease-in-out infinite;
+}
+
+.distance__map-footer {
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    color: var(--color-rojo-amor);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.distance__map-note {
+    margin-top: 18px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* CARTA SOBRE LA DISTANCIA */
+
+.distance__message {
+    max-width: 700px;
+    margin: 100px auto 0;
+    padding: 50px 40px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    background: linear-gradient(
+        145deg,
+        #FFFFFF,
+        var(--color-rosa-pastel),
+        var(--color-superficie-profunda)
+    );
+    box-shadow: var(--sombra-romantica);
+    text-align: center;
+}
+
+.distance__message-icon {
+    color: var(--color-rojo-pasion);
+}
+
+.distance__message > span,
+.distance__dream > span {
+    display: block;
+    margin-top: 20px;
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.distance__message h2 {
+    margin-top: 22px;
+    color: var(--color-vino);
+    font-family: var(--font-romantica);
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.distance__message p {
+    max-width: 510px;
+    margin: 23px auto 0;
+    color: var(--color-texto-secundario);
+    font-family: var(--font-romantica);
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.distance__message strong {
+    display: block;
+    margin-top: 30px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* NUESTRO SUEÑO */
+
+.distance__dream {
+    max-width: 850px;
+    margin: 100px auto 0;
+    padding: 55px 35px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radio-grande);
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(229, 143, 163, 0.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-vino),
+            var(--color-rojo-amor),
+            #8D3654
+        );
+    color: var(--color-texto-claro);
+    box-shadow: var(--sombra-romantica);
+    text-align: center;
+}
+
+.distance__dream-decoration {
+    color: var(--color-rosa-claro);
+}
+
+.distance__dream > span {
+    color: var(--color-rosa-claro);
+}
+
+.distance__dream h2 {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: var(--color-texto-claro);
+    font-family: var(--font-titulos);
+    font-size: clamp(27px, 4vw, 39px);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.distance__dream h2 span {
+    display: block;
+    color: var(--color-rosa-claro);
+    font-style: italic;
+}
+
+.distance__dream > p {
+    max-width: 530px;
+    margin: 20px auto 0;
+    color: var(--color-rosa-pastel);
+    font-family: var(--font-romantica);
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.distance__dream-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    color: var(--color-rosa-claro);
+    font-size: 12px;
+}
+
+/* CIERRE */
+
+.distance__closing {
+    max-width: 650px;
+    margin: 85px auto 80px;
+    padding: 0 25px;
+    color: var(--color-vino);
+    text-align: center;
+}
+
+.distance__closing > svg {
+    color: var(--color-rojo-pasion);
+}
+
+.distance__closing p {
+    margin-top: 18px;
+    font-family: var(--font-romantica);
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.5;
+}
+
+.distance__closing > span {
+    display: block;
+    margin-top: 15px;
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.distance__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+    border-top: 1px solid var(--color-borde);
+}
+
+.distance__footer button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 18px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-pequeno);
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.distance__footer button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-romantica);
+}
+
+.distance__footer > span {
+    color: var(--color-texto-secundario);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+    .distance__hero {
+        padding: 25px 20px 45px;
+    }
+
+    .distance__heading {
+        margin-top: 50px;
+    }
+
+    .distance__map {
+        min-height: 320px;
+        padding: 45px 10px 75px;
+    }
+
+    .distance__location {
+        width: 135px;
+    }
+
+    .distance__location strong {
+        font-size: 17px;
+    }
+
+    .distance__location small {
+        max-width: 130px;
+        line-height: 1.5;
+    }
+
+    .distance__route {
+        width: 65%;
+    }
+
+    .distance__message {
+        margin: 75px 15px 0;
+        padding: 40px 22px;
+    }
+
+    .distance__dream {
+        margin: 75px 15px 0;
+        padding: 45px 22px;
+    }
+
+    .distance__footer {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .distance__footer > span {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .distance__footer button {
+        font-size: 11px;
+    }
+}

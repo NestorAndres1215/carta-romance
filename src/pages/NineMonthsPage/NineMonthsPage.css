@@ -1,0 +1,436 @@
+
+.nine-months {
+    min-height: 100vh;
+    padding-bottom: 45px;
+}
+
+/* HERO */
+
+.nine-months__hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 30px 65px;
+}
+
+.nine-months__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: none;
+    background: transparent;
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    cursor: pointer;
+    transition: color var(--transicion-suave);
+}
+
+.nine-months__back:hover {
+    color: var(--color-rojo-amor);
+}
+
+.nine-months__heading {
+    max-width: 700px;
+    margin: 65px auto 0;
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+.nine-months__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--color-rojo-amor);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nine-months__heading h1 {
+    margin-top: 20px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: clamp(40px, 7vw, 65px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.nine-months__heading h1 span {
+    display: block;
+    color: var(--color-rojo-pasion);
+    font-style: italic;
+}
+
+.nine-months__heading p {
+    max-width: 520px;
+    margin: 23px auto 0;
+    color: var(--color-texto-secundario);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* LIBRO */
+
+.nine-months__book {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 35px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    background: linear-gradient(
+        145deg,
+        var(--color-superficie),
+        var(--color-rosa-pastel)
+    );
+    box-shadow: var(--sombra-romantica);
+}
+
+.nine-months__book-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    color: var(--color-rojo-amor);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nine-months__layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* ÍNDICE DE CAPÍTULOS */
+
+.nine-months__chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.nine-months__chapter {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid transparent;
+    border-radius: var(--radio-medio);
+    background: transparent;
+    color: var(--color-texto);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background var(--transicion-suave),
+        border-color var(--transicion-suave),
+        transform var(--transicion-suave);
+}
+
+.nine-months__chapter:hover,
+.nine-months__chapter--active {
+    transform: translateX(3px);
+    border-color: var(--color-borde);
+    background: var(--color-superficie-profunda);
+}
+
+.nine-months__chapter > span {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--color-rosa-suave);
+    color: var(--color-rojo-amor);
+    font-family: var(--font-titulos);
+    font-size: 13px;
+    transition:
+        background var(--transicion-suave),
+        color var(--transicion-suave);
+}
+
+.nine-months__chapter--active > span {
+    background: var(--color-rojo-amor);
+    color: var(--color-texto-claro);
+}
+
+.nine-months__chapter div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.nine-months__chapter strong {
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nine-months__chapter small {
+    color: var(--color-texto-secundario);
+    font-size: 10px;
+}
+
+.nine-months__chapter > svg {
+    flex-shrink: 0;
+    color: var(--color-rojo-amor);
+    opacity: 0.7;
+}
+
+/* PÁGINA DEL LIBRO */
+
+.nine-months__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 520px;
+    padding: 25px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(244, 191, 203, 0.3),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            var(--color-perla),
+            var(--color-rosa-pastel)
+        );
+    box-shadow: var(--sombra-suave);
+    animation: fadeIn 0.3s ease;
+}
+
+.nine-months__page-top,
+.nine-months__page-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-rojo-amor);
+}
+
+.nine-months__page-top {
+    font-size: 10px;
+    letter-spacing: 1.6px;
+}
+
+.nine-months__page-content {
+    padding: 35px 10px;
+    text-align: center;
+}
+
+.nine-months__page-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-texto-secundario);
+    font-size: 11px;
+}
+
+.nine-months__page-content h2 {
+    margin-top: 25px;
+    color: var(--color-vino);
+    font-family: var(--font-romantica);
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 500;
+}
+
+.nine-months__page-subtitle {
+    margin-top: 10px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 19px;
+    font-style: italic;
+}
+
+.nine-months__page-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin: 28px 0;
+    color: var(--color-rojo-pasion);
+}
+
+.nine-months__page-divider span {
+    width: 40px;
+    height: 1px;
+    background: var(--color-rosa);
+}
+
+.nine-months__page-message {
+    max-width: 380px;
+    margin: 0 auto;
+    color: var(--color-texto);
+    font-family: var(--font-romantica);
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+.nine-months__memory {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 35px;
+    padding: 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    background: var(--color-superficie-profunda);
+    color: var(--color-rojo-amor);
+    text-align: left;
+}
+
+.nine-months__memory svg {
+    flex-shrink: 0;
+}
+
+.nine-months__memory p {
+    color: var(--color-texto);
+    font-family: var(--font-romantica);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.nine-months__page-bottom {
+    padding-top: 15px;
+    border-top: 1px solid var(--color-borde);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* CIERRE */
+
+.nine-months__closing {
+    max-width: 650px;
+    margin: 90px auto 80px;
+    padding: 0 25px;
+    color: var(--color-vino);
+    text-align: center;
+}
+
+.nine-months__closing > svg {
+    color: var(--color-rojo-pasion);
+}
+
+.nine-months__closing h2 {
+    margin-top: 20px;
+    font-family: var(--font-titulos);
+    font-size: clamp(25px, 4vw, 35px);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.nine-months__closing h2 span {
+    display: block;
+    color: var(--color-rojo-pasion);
+    font-style: italic;
+}
+
+.nine-months__closing p {
+    margin-top: 17px;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+
+.nine-months__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+    border-top: 1px solid var(--color-borde);
+}
+
+.nine-months__footer button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 18px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-pequeno);
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.nine-months__footer button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-romantica);
+}
+
+.nine-months__footer > span {
+    color: var(--color-texto-secundario);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .nine-months__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .nine-months__chapters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .nine-months__hero {
+        padding: 25px 20px 45px;
+    }
+
+    .nine-months__heading {
+        margin-top: 50px;
+    }
+
+    .nine-months__book {
+        margin: 0 12px;
+        padding: 20px 12px;
+    }
+
+    .nine-months__chapters {
+        grid-template-columns: 1fr;
+    }
+
+    .nine-months__page {
+        min-height: 470px;
+        padding: 18px;
+    }
+
+    .nine-months__footer {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .nine-months__footer > span {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nine-months__footer button {
+        font-size: 11px;
+    }
+}

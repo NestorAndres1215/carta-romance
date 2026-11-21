@@ -1,0 +1,515 @@
+
+.first-message {
+    min-height: 100vh;
+    padding-bottom: 45px;
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            var(--color-perla) 0%,
+            var(--color-fondo) 65%,
+            var(--color-superficie-profunda) 100%
+        );
+}
+
+/* ENCABEZADO */
+
+.first-message__hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 30px 65px;
+}
+
+.first-message__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: none;
+    background: transparent;
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.first-message__back:hover {
+    color: var(--color-rojo-amor);
+}
+
+.first-message__heading {
+    max-width: 650px;
+    margin: 65px auto 0;
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+.first-message__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--color-rojo-amor);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.first-message__eyebrow svg {
+    color: var(--color-rojo-pasion);
+}
+
+.first-message__heading h1 {
+    margin-top: 20px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: clamp(42px, 7vw, 70px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.first-message__heading h1 span {
+    display: block;
+    font-style: italic;
+    color: var(--color-rojo-pasion);
+}
+
+.first-message__heading p {
+    max-width: 520px;
+    margin: 23px auto 0;
+    color: var(--color-texto-secundario);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* EXPOSICIÓN PRINCIPAL */
+
+.first-message__exhibition {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.first-message__museum-label {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-borde);
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    letter-spacing: 1.7px;
+}
+
+/* CARTA DE AMOR */
+
+.first-message__letter {
+    position: relative;
+    margin-top: 25px;
+    padding: 75px 65px;
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #FFFFFF 0%,
+            var(--color-perla) 55%,
+            var(--color-rosa-suave) 100%
+        );
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    box-shadow:
+        var(--sombra-media),
+        inset 0 0 35px rgba(229, 143, 163, 0.08);
+}
+
+.first-message__letter::before,
+.first-message__letter::after {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    content: '';
+    border-color: var(--color-rosa);
+    border-style: solid;
+    opacity: 0.75;
+}
+
+.first-message__letter::before {
+    top: 15px;
+    left: 15px;
+    border-width: 1px 0 0 1px;
+}
+
+.first-message__letter::after {
+    right: 15px;
+    bottom: 15px;
+    border-width: 0 1px 1px 0;
+}
+
+.first-message__letter-decoration {
+    display: flex;
+    justify-content: center;
+    color: var(--color-rojo-pasion);
+}
+
+.first-message__letter-label {
+    display: block;
+    margin-top: 25px;
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.first-message__letter h2 {
+    margin-top: 25px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: clamp(35px, 5vw, 49px);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.first-message__letter-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: var(--color-rojo-pasion);
+}
+
+.first-message__letter-divider span {
+    width: 55px;
+    height: 1px;
+    background: var(--color-rosa);
+}
+
+.first-message__letter p {
+    max-width: 430px;
+    margin: 0 auto;
+    color: var(--color-texto);
+    font-family: var(--font-romantica);
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+.first-message__letter-note {
+    margin-top: 18px !important;
+    color: var(--color-texto-secundario) !important;
+    font-style: italic;
+}
+
+.first-message__letter-signature {
+    display: block;
+    margin-top: 35px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 20px;
+    font-style: italic;
+}
+
+.first-message__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    color: var(--color-rojo-amor);
+    font-family: var(--font-romantica);
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* LÍNEA DE TIEMPO */
+
+.first-message__story {
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: 0 25px;
+}
+
+.first-message__story-heading {
+    text-align: center;
+}
+
+.first-message__story-heading > span {
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.first-message__story-heading h2 {
+    margin-top: 15px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.first-message__story-heading p {
+    margin-top: 12px;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+}
+
+.first-message__timeline {
+    max-width: 620px;
+    margin: 55px auto 0;
+}
+
+.first-message__timeline-item {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    padding-bottom: 45px;
+}
+
+.first-message__timeline-item:not(:last-child)::after {
+    position: absolute;
+    top: 48px;
+    bottom: 0;
+    left: 23px;
+    width: 1px;
+    background: var(--color-rosa);
+    content: '';
+}
+
+.first-message__timeline-icon {
+    z-index: 1;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--color-borde);
+    border-radius: 50%;
+    background: var(--color-superficie);
+    color: var(--color-rojo-amor);
+    box-shadow: var(--sombra-suave);
+}
+
+.first-message__timeline-item div {
+    padding-top: 3px;
+}
+
+.first-message__timeline-item div > span {
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.first-message__timeline-item h3 {
+    margin-top: 9px;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.first-message__timeline-item p {
+    margin-top: 9px;
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CIERRE ROMÁNTICO */
+
+.first-message__closing {
+    max-width: 650px;
+    margin: 30px auto 80px;
+    padding: 45px 25px;
+    text-align: center;
+    color: var(--color-rojo-amor);
+}
+
+.first-message__closing > p {
+    margin-top: 18px;
+    font-family: var(--font-romantica);
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: 1.5;
+}
+
+.first-message__closing > p span {
+    font-style: italic;
+    color: var(--color-rojo-pasion);
+}
+
+.first-message__closing > span {
+    display: block;
+    margin-top: 13px;
+    color: var(--color-texto-secundario);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+.first-message__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+    border-top: 1px solid var(--color-borde);
+}
+
+.first-message__footer button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 18px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-pequeno);
+    font-family: var(--font-principal);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.first-message__footer button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-romantica);
+}
+
+.first-message__footer button:focus-visible {
+    outline: 3px solid var(--color-rosa);
+    outline-offset: 3px;
+}
+
+.first-message__footer > span {
+    color: var(--color-texto-secundario);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* RECUERDO DE LA NOCHE ESPECIAL */
+
+.first-message__date-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 390px;
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    background: linear-gradient(
+        135deg,
+        var(--color-perla),
+        var(--color-rosa-suave)
+    );
+    box-shadow: var(--sombra-romantica);
+}
+
+.first-message__date-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 90px;
+    padding-right: 22px;
+    border-right: 1px solid var(--color-borde);
+}
+
+.first-message__date-card > div:first-child span {
+    color: var(--color-rojo-amor);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.first-message__date-card > div:first-child strong {
+    margin: 4px 0;
+    color: var(--color-vino);
+    font-family: var(--font-titulos);
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.first-message__date-time {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--color-rojo-amor);
+}
+
+.first-message__date-time strong {
+    font-family: var(--font-titulos);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.first-message__date-time span {
+    color: var(--color-texto-secundario);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .first-message__hero {
+        padding: 25px 20px 45px;
+    }
+
+    .first-message__heading {
+        margin-top: 50px;
+    }
+
+    .first-message__letter {
+        padding: 55px 25px;
+    }
+
+    .first-message__story {
+        margin-top: 75px;
+    }
+
+    .first-message__footer {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .first-message__footer > span {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .first-message__footer button {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 420px) {
+    .first-message__date-card {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .first-message__date-card > div:first-child {
+        min-width: 75px;
+        padding-right: 15px;
+    }
+
+    .first-message__date-time strong {
+        font-size: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .first-message__heading {
+        animation: none;
+    }
+
+    .first-message__back,
+    .first-message__footer button {
+        transition: none;
+    }
+}

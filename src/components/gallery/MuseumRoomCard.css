@@ -1,0 +1,116 @@
+
+.room-card {
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 23px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    background: var(--color-superficie);
+    color: var(--color-texto);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform var(--transicion-suave),
+        border-color var(--transicion-suave),
+        background var(--transicion-suave),
+        box-shadow var(--transicion-suave);
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-rosa);
+    background: var(--color-perla);
+    box-shadow: var(--sombra-romantica);
+}
+
+.room-card:focus-visible {
+    outline: 3px solid var(--color-rosa);
+    outline-offset: 4px;
+}
+
+.room-card--selected {
+    border-color: var(--color-rojo-amor);
+    background: var(--color-rosa-suave);
+    box-shadow: var(--sombra-romantica);
+}
+
+.room-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-rojo-amor);
+}
+
+.room-card__number {
+    font-family: var(--font-titulos);
+    font-size: 30px;
+    color: var(--color-rosa);
+}
+
+.room-card__content {
+    margin: 22px 0;
+}
+
+.room-card__category {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-rojo-amor);
+}
+
+.room-card__content h3 {
+    margin-top: 9px;
+    font-family: var(--font-titulos);
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-vino);
+}
+
+.room-card__content p {
+    margin-top: 7px;
+    font-family: var(--font-romantica);
+    font-size: 16px;
+    color: var(--color-texto-secundario);
+}
+
+.room-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid var(--color-borde);
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--color-texto-secundario);
+}
+
+.room-card__arrow {
+    font-size: 19px;
+    color: var(--color-rojo-amor);
+    transition: transform var(--transicion-suave);
+}
+
+.room-card:hover .room-card__arrow {
+    transform: translateX(4px);
+}
+
+.room-card--selected .room-card__number {
+    color: var(--color-rojo-amor);
+}
+
+@media (max-width: 600px) {
+    .room-card {
+        min-height: 205px;
+        padding: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .room-card,
+    .room-card__arrow {
+        transition: none;
+    }
+}

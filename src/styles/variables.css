@@ -1,0 +1,54 @@
+
+:root {
+    /* Fondos románticos */
+    --color-fondo: #FFF0F3;
+    --color-superficie: #FFF9FA;
+    --color-superficie-rosa: #FCE4E9;
+    --color-superficie-profunda: #F8D5DE;
+
+    /* Amor y pasión */
+    --color-vino: #68283F;
+    --color-vino-claro: #8D3654;
+    --color-rojo-amor: #A83250;
+    --color-rojo-pasion: #C4455D;
+
+    /* Tonos de corazones y pétalos */
+    --color-rosa: #E58FA3;
+    --color-rosa-claro: #F4BFCB;
+    --color-rosa-suave: #FCE4E9;
+    --color-rosa-pastel: #FFE8ED;
+
+    /* Detalles románticos */
+    --color-dorado: #D9AD78;
+    --color-champagne: #F0D6BB;
+    --color-perla: #FFF5F5;
+
+    /* Textos */
+    --color-texto: #59333F;
+    --color-texto-secundario: #966777;
+    --color-texto-claro: #FFF9FA;
+
+    /* Bordes */
+    --color-borde: #F0CDD5;
+    --color-borde-dorado: #E7C9A7;
+
+    /* Tipografías */
+    --font-principal: 'Lato', sans-serif;
+    --font-titulos: 'Playfair Display', serif;
+    --font-romantica: 'Cormorant Garamond', serif;
+
+    /* Dimensiones */
+    --radio-pequeno: 10px;
+    --radio-medio: 18px;
+    --radio-grande: 28px;
+    --radio-redondo: 50%;
+
+    /* Sombras */
+    --sombra-suave: 0 8px 30px rgba(168, 50, 80, 0.08);
+    --sombra-media: 0 14px 40px rgba(168, 50, 80, 0.13);
+    --sombra-romantica: 0 10px 35px rgba(229, 143, 163, 0.25);
+
+    /* Transiciones */
+    --transicion-suave: 0.3s ease;
+    --transicion-elegante: 0.5s ease;
+}

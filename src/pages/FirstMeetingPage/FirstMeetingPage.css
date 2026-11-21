@@ -1,0 +1,535 @@
+
+.meeting-page {
+    min-height: 100vh;
+    padding-bottom: 70px;
+    background: var(--color-fondo);
+}
+
+.meeting-container {
+    width: min(100% - 40px, 950px);
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+.meeting-heading {
+    max-width: 680px;
+    margin: 0 auto 55px;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.meeting-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--color-rojo-amor);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.meeting-heading h1 {
+    margin: 0;
+    color: var(--color-vino);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.7rem, 7vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.meeting-heading h1 span {
+    color: var(--color-rojo-amor);
+    font-style: italic;
+}
+
+.meeting-heading p {
+    max-width: 550px;
+    margin: 22px auto 0;
+    color: var(--color-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+/* POSTAL */
+
+.meeting-artwork {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 430px;
+    margin-bottom: 65px;
+}
+
+.meeting-postcard {
+    position: relative;
+    width: min(100%, 480px);
+    padding: 18px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 8px;
+    box-shadow: var(--sombra-romantica);
+    transform: rotate(-2deg);
+    animation: postcardAppear 1s ease;
+}
+
+.postcard-top,
+.postcard-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-rojo-amor);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.postcard-illustration {
+    position: relative;
+    height: 270px;
+    margin: 16px 0;
+    overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        #F9DCE3 0%,
+        #FCE8EC 55%,
+        #EFBBC9 100%
+    );
+}
+
+.postcard-sun {
+    position: absolute;
+    top: 35px;
+    right: 65px;
+    width: 75px;
+    height: 75px;
+    background: #F2C4B5;
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: 0 0 35px rgba(196, 69, 93, 0.12);
+}
+
+.postcard-hill {
+    position: absolute;
+    bottom: -80px;
+    width: 380px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.hill-one {
+    left: -90px;
+    background: #D98D9F;
+}
+
+.hill-two {
+    right: -120px;
+    bottom: -105px;
+    background: #A85E75;
+}
+
+.postcard-person {
+    position: absolute;
+    bottom: 45px;
+    z-index: 2;
+    width: 57px;
+    height: 105px;
+    border-radius: 35px 35px 8px 8px;
+}
+
+.postcard-person span {
+    position: absolute;
+    top: -34px;
+    left: 8px;
+    width: 42px;
+    height: 42px;
+    background: #684A42;
+    border-radius: 50%;
+}
+
+.person-one {
+    left: calc(50% - 70px);
+    background: #A83250;
+    transform: rotate(-8deg);
+}
+
+.person-two {
+    right: calc(50% - 70px);
+    background: #D58B9B;
+    transform: rotate(8deg);
+}
+
+.postcard-heart {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    z-index: 3;
+    color: #FFF5F5;
+    filter: drop-shadow(0 3px 8px rgba(168, 50, 80, 0.3));
+    transform: translate(-50%, -50%);
+    animation: heartbeat 1.8s infinite;
+}
+
+.postcard-bottom {
+    padding-top: 4px;
+}
+
+.meeting-artwork-decoration {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 50%;
+    box-shadow: var(--sombra-romantica);
+}
+
+.decoration-one {
+    top: 30px;
+    left: 12%;
+}
+
+.decoration-two {
+    right: 12%;
+    bottom: 35px;
+}
+
+.meeting-floating-note {
+    position: absolute;
+    right: 8%;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 17px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    box-shadow: var(--sombra-romantica);
+}
+
+/* CARTA */
+
+.meeting-letter {
+    max-width: 700px;
+    margin: 0 auto 65px;
+    padding: 45px clamp(24px, 6vw, 65px);
+    background: linear-gradient(
+        145deg,
+        var(--color-superficie) 0%,
+        var(--color-perla) 100%
+    );
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-medio);
+    box-shadow: var(--sombra-media);
+    text-align: center;
+}
+
+.meeting-letter-icon,
+.meeting-date-icon {
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 20px;
+    color: var(--color-rojo-amor);
+    background: var(--color-rosa-pastel);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(229, 143, 163, 0.15);
+}
+
+.meeting-letter-label {
+    color: var(--color-rojo-amor);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.meeting-letter h2,
+.meeting-date h2,
+.meeting-wish h2 {
+    margin: 17px 0;
+    color: var(--color-vino);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    font-weight: 500;
+}
+
+.meeting-letter p {
+    margin: 20px 0;
+    color: var(--color-texto-secundario);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.9;
+}
+
+.meeting-letter .meeting-letter-highlight {
+    color: var(--color-rojo-amor);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.meeting-letter-signature {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 35px;
+    color: var(--color-texto-secundario);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+}
+
+.meeting-letter-signature strong {
+    color: var(--color-rojo-amor);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* FECHA */
+
+.meeting-date {
+    padding: 50px 25px;
+    margin-bottom: 55px;
+    background: linear-gradient(
+        135deg,
+        var(--color-rosa-pastel),
+        var(--color-superficie-profunda)
+    );
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+}
+
+.meeting-date > span {
+    color: var(--color-rojo-amor);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.meeting-date h2 {
+    margin-bottom: 12px;
+}
+
+.meeting-date p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--color-texto-secundario);
+    line-height: 1.8;
+}
+
+.meeting-date-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    color: var(--color-rojo-amor);
+}
+
+.meeting-date-decoration span {
+    width: 55px;
+    height: 1px;
+    background: var(--color-dorado);
+}
+
+/* DESEO */
+
+.meeting-wish {
+    max-width: 680px;
+    margin: 0 auto 55px;
+    color: var(--color-rojo-amor);
+    text-align: center;
+}
+
+.meeting-wish > svg {
+    margin-bottom: 10px;
+    color: var(--color-rosa);
+}
+
+.meeting-wish h2 {
+    margin-top: 10px;
+}
+
+.meeting-wish p {
+    color: var(--color-texto-secundario);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.9;
+}
+
+.meeting-wish span {
+    display: block;
+    margin-top: 22px;
+    color: var(--color-rojo-amor);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
+/* CIERRE Y NAVEGACIÓN */
+
+.meeting-closing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 45px;
+    color: var(--color-rojo-amor);
+    text-align: center;
+}
+
+.meeting-closing p {
+    max-width: 500px;
+    color: var(--color-texto-secundario);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.meeting-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.meeting-nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 18px;
+    color: var(--color-rojo-amor);
+    background: var(--color-superficie);
+    border: 1px solid var(--color-rosa-claro);
+    border-radius: var(--radio-pequeno);
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.meeting-nav-button:hover {
+    color: var(--color-texto-claro);
+    background: var(--color-rojo-amor);
+    border-color: var(--color-rojo-amor);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-romantica);
+}
+
+.meeting-nav-next {
+    color: var(--color-texto-claro);
+    background: linear-gradient(
+        135deg,
+        var(--color-rojo-amor),
+        var(--color-rojo-pasion)
+    );
+    border-color: var(--color-rojo-amor);
+}
+
+.meeting-nav-next:hover {
+    background: var(--color-vino);
+    border-color: var(--color-vino);
+}
+
+/* ANIMACIONES */
+
+@keyframes postcardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) rotate(2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(-2deg);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .meeting-container {
+        width: min(100% - 28px, 950px);
+        padding-top: 40px;
+    }
+
+    .meeting-artwork {
+        min-height: 340px;
+        margin-bottom: 45px;
+    }
+
+    .meeting-postcard {
+        padding: 12px;
+    }
+
+    .postcard-illustration {
+        height: 220px;
+    }
+
+    .decoration-one {
+        left: 0;
+        top: 5px;
+    }
+
+    .decoration-two {
+        right: 0;
+        bottom: 10px;
+    }
+
+    .meeting-floating-note {
+        right: 0;
+        bottom: 0;
+        font-size: 0.95rem;
+    }
+
+    .meeting-letter {
+        padding: 35px 22px;
+    }
+
+    .meeting-letter p {
+        font-size: 1.2rem;
+    }
+
+    .meeting-navigation {
+        align-items: stretch;
+    }
+
+    .meeting-nav-button {
+        flex: 1;
+        padding: 11px 10px;
+        font-size: 0.85rem;
+    }
+}
